@@ -1,0 +1,22 @@
+# Node dependencies
+node_modules/
+
+# Python cache files
+__pycache__/
+.pytest_cache/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Build outputs
+build/
+dist/
+
+# Logs and reports
+*.log
+coverage/
+
+# Misc
+.DS_Store
+Thumbs.db
