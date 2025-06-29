@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-  // Dark/light mode toggle
   const toggle = document.getElementById('mode-toggle');
   if (toggle) {
     document.body.classList.add('light-mode');
@@ -9,7 +8,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // Filtering
   const filters = document.querySelectorAll('[data-filter]');
   const items = document.querySelectorAll('[data-category]');
   filters.forEach(btn => {
@@ -21,11 +19,9 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Copy class name
   document.querySelectorAll('.copy-class').forEach(el => {
     el.addEventListener('click', () => {
-      const text = el.textContent;
-      navigator.clipboard.writeText(text).then(() => {
+      navigator.clipboard.writeText(el.textContent).then(() => {
         el.classList.add('copied');
         setTimeout(() => el.classList.remove('copied'), 800);
       });

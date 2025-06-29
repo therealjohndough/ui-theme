@@ -1,6 +1,6 @@
 <?php
 /**
- * UI Components Lab – Grid with Filters and Dark Mode
+ * UI Components Lab
  */
 $components = [
   ['title' => 'Primary Button', 'category' => 'buttons'],
@@ -35,11 +35,16 @@ $components = [
 </div>
 
 <div class="button-grid">
-  <?php for ($i = 1; $i <= 17; $i++) :
-    $class = "btn-style-$i"; ?>
+  <?php
+  $colors = ['#007bff', '#6c757d', '#28a745', '#17a2b8', '#ffc107', '#dc3545', '#f8f9fa', '#343a40', '#e83e8c', '#20c997', '#6610f2', '#fd7e14', '#6f42c1', '#198754', '#0d6efd', '#d63384', '#0dcaf0'];
+  for ($i = 1; $i <= 17; $i++) :
+    $class = "btn-style-$i";
+    $color = in_array($i, [5, 7, 12, 17]) ? '#212529' : '#fff';
+    ?>
     <div class="button-example" data-category="buttons">
       <button class="<?php echo $class; ?>">Button <?php echo $i; ?></button>
       <code class="copy-class">.<?php echo $class; ?></code>
     </div>
   <?php endfor; ?>
 </div>
+
