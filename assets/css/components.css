@@ -1,0 +1,20 @@
+/* Component styles */
+:root {
+  --background-color: #ffffff;
+  --text-color: #000000;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark {
+  --background-color: #222222;
+  --text-color: #eeeeee;
+}
+
+.controls button {
+  margin-right: 0.5rem;
+}
