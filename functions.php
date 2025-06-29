@@ -30,3 +30,4 @@ function ui_theme_enqueue_assets() {
     );
 }
 add_action( 'wp_enqueue_scripts', 'ui_theme_enqueue_assets' );
+

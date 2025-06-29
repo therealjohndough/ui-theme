@@ -8,6 +8,13 @@ $components = [
   ['title' => 'Input Field', 'category' => 'forms'],
 ];
 ?>
+
+<section class="button-examples">
+  <h3>Buttons</h3>
+  <button class="btn">Default Button</button>
+  <button class="btn btn-primary">Primary Button</button>
+</section>
+
 <div class="mode-toggle">
   <button id="mode-toggle">Toggle Dark Mode</button>
 </div>
@@ -24,7 +31,7 @@ $components = [
     <div class="ui-component" data-category="<?php echo esc_attr($component['category']); ?>">
       <?php echo esc_html($component['title']); ?>
     </div>
-  <?php endforEach; ?>
+  <?php endforeach; ?>
 </div>
 
 <div class="button-grid">
@@ -36,4 +43,3 @@ $components = [
     </div>
   <?php endfor; ?>
 </div>
-
