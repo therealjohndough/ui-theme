@@ -24,4 +24,8 @@ document.addEventListener('DOMContentLoaded', function () {
       body.classList.toggle('light-mode');
     });
   }
+
+  // Main branch message
+  console.log('Main JS loaded.');
 });
+
