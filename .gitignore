@@ -1,51 +1,35 @@
-# Node modules and Vite cache
+# Node
 node_modules/
 .vite/
 dist/
 assets/dist/
 
-# Vite / npm logs
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-
-# Build tools
-build/
-.cache/
-temp/
-
-# WordPress-specific
+# WordPress
 wp-content/uploads/
 wp-content/cache/
-*.log
 
-# OS-specific
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# macOS / OS stuff
 .DS_Store
 Thumbs.db
 
-# Python bytecode
+# Python
 __pycache__/
-.pytest_cache/
 *.py[cod]
-*.pyo
-*.pyd
-*.so
 
-# Composer
-/vendor/
+# Composer (if PHP)
+vendor/
 composer.lock
 
-# Environment files
-.env
-.env.*
-
-# IDEs
+# VS Code / IDEs
 .vscode/
 .idea/
-*.sublime-project
-*.sublime-workspace
 
-# Mac system files
-Icon?
-b
+# Environment
+.env
+.env.*
