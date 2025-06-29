@@ -1,20 +1,53 @@
-/* Component styles */
-:root {
-  --background-color: #ffffff;
-  --text-color: #000000;
+body.light-mode {
+  background-color: #ffffff;
+  color: #222222;
 }
 
-body {
-  background-color: var(--background-color);
-  color: var(--text-color);
-  transition: background-color 0.3s, color 0.3s;
+body.dark-mode {
+  background-color: #222222;
+  color: #eeeeee;
 }
 
-body.dark {
-  --background-color: #222222;
-  --text-color: #eeeeee;
+.mode-toggle, .controls {
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
 .controls button {
-  margin-right: 0.5rem;
+  margin: 0 0.25rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
 }
+
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.button-example button {
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.button-example code {
+  display: block;
+  margin-top: 0.5rem;
+  font-family: monospace;
+  cursor: pointer;
+}
+
+.copy-class.copied {
+  color: green;
+}
+
+<?php
+$colors = ['#007bff', '#6c757d', '#28a745', '#17a2b8', '#ffc107', '#dc3545', '#f8f9fa', '#343a40', '#e83e8c', '#20c997', '#6610f2', '#fd7e14', '#6f42c1', '#198754', '#0d6efd', '#d63384', '#0dcaf0'];
+for ($i = 1; $i <= 17; $i++) {
+  $color = in_array($i, [5, 7, 12, 17]) ? '#212529' : '#fff';
+  echo ".btn-style-$i { background: {$colors[$i - 1]}; color: $color; }\n";
+}
+?>
+
